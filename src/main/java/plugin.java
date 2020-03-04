@@ -11,10 +11,11 @@ public class plugin {
         String nome = JOptionPane.showInputDialog("Nombre del repositorio");
         String descripcion = JOptionPane.showInputDialog("Descripcion");
         GitHub github = GitHubBuilder.fromPropertyFile("C:\\Users\\Josemolamazo\\IdeaProjects\\pluginGitCd\\.github").build();
+
         GHRepository repo = github.createRepository(nome,descripcion,
                 "https://github.com/jreyarijon",false);
 
-        repo.addCollaborators(github.getUser("damiancastelao"));
+        //repo.addCollaborators(github.getUser("damiancastelao"));
     }
 
 }
